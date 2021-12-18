@@ -3,13 +3,12 @@ require('dotenv').config()
 
 // creating a base name for the mongodb
 // REPLACE THE STRING WITH YOUR OWN DATABASE NAME
-const mongooseBaseName = 'express-auth-template'
+const mongooseBaseName = 'bing-bong'
 
 // create the mongodb uri for development and test
 const database = {
-  development:
-    "mongodb+srv://tgm98:1532@cluster0.ldlwy.mongodb.net/bingbong-videoapp?retryWrites=true&w=majority",
-  test: "mongodb+srv://tgm98:1532@cluster0.ldlwy.mongodb.net/bingbong-videoapp?retryWrites=true&w=majority",
+  development: `mongodb://127.0.0.1:27017/${mongooseBaseName}-development`,
+  test: `mongodb://127.0.0.1:27017/${mongooseBaseName}-test`,
 }
 
 // Identify if development environment is test or development
